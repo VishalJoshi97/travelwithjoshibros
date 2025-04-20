@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head section -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Travel Guide</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<!-- Body starts -->
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="img/travel.png" alt="Logo" />
+        </div>
+        <ul>
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- Mobile Navigation -->
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="slider-container swiper">
+      <div class="slide-content swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="overlay swiper-slide">
+          <img src="img/scase-2.png" alt="" />
+          <div class="img-overlay">
+            <p>Let's Travel the World Together!</p>
+            <h2>Discover span The World</h2>
+            <h2>With our Travel Guide</h2>
+          </div>
+          </div>
+        
+
+        <!-- Slide 2 -->
+        <div class="overlay swiper-slide">
+          <img src="img/scase-1.png" alt="" />
+          <div class="img-overlay">
+            <p>Let's Travel the World Together!</p>
+            <h2><span>Discover</span> The World</h2>
+            <h2>With our Travel Guide</h2>
+          </div>
+          </div>
+
+        <!-- Slide 3 -->
+        <div class="overlay swiper-slide">
+          <img src="img/scase-3.png" alt="" />
+          <div class="img-overlay">
+            <p>Let's Travel the World Together!</p>
+            <h2><span>Discover</span> The World</h2>
+            <h2>With our MyTravel</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+<secction id="Location-search"><!-- section#Location-Search-->
+<div class="container">
+    <div class ="form-wrapper">
+        <form action="#">
+            <input type="text" placeholder="Search for a location" class="form-control"/>
+            <select class="form-control">
+            <option value="Destination">Destination</option>
+            <option value="Destination">Goa</option>
+            <option value="Destination">Karnataka</option>
+            <option value="Destination">Maharashtra</option>
+            <option value="Destination">Delhi</option>
+            </select>
+            <select class="form-control">
+                <option value="duration">Duration</option>
+                <option value="day-1">Day Tour</option>
+                <option value="Destination2">2-4 Days Tour</option>
+                <option value="Destination3">5-7 Days Tour</option>
+                <option value="Destination4">7+ Days</option>
+                </select>
+                <button type="button" class="primary-btn">Search Now</button>
+        </form>
+    </div>
+</div>
+</secction>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/swiper.js"></script>
+</body>
+</html>

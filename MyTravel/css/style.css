@@ -1,0 +1,324 @@
+/* step 1: Import Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif; /* Default body font */
+  }
+  
+  /* Poppins Regular */
+  .poppins-regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Poppins Medium */
+  .poppins-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Poppins Semi-Bold */
+  .poppins-semibold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  /* Ubuntu font styles */
+  .ubuntu-regular {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Ubuntu Medium */
+  .ubuntu-medium {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Ubuntu Semi-Bold */
+  .ubuntu-semibold {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+
+
+/* step 2: Add CSS variables for colors */
+  :root{
+    --primary-color: #2095ae; /* Primary color */
+--white-color: #FFFFFF; /* White color */
+--light-gray-color: #ddd; /* Light gray color */
+--blue-color: #007bff; /* Blue color */
+}
+
+/* step 3: Add CSS variables for font sizes */
+*{/*for all elements//Global styling */
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif; /* Default font for all elements */
+    font-size: 16px; /* Default font size for all elements */
+}
+
+html{/*for html styling */
+    font-size: 16px; /* Default font size for all elements */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+.container{/*for container//Layout styling */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding for the container */
+    width: 100%; /* Full width for the container */
+} 
+
+img{/*for image styling */
+    display: block;
+    width: 100%;
+    height: 100%; /* Responsive images */
+    object-fit: cover; /* aspect ratio Cover the container without distortion */
+}
+
+a{/*for link styling */
+    text-decoration: none; /* Remove underline from links */
+    color: var(--primary-color); /* Primary color for links */
+    transition: all 0.3s ease; /* Transition effect for links */
+}
+
+/* text styling */
+.heading-normal-text{
+    font-size: 1.5rem; /* Font size for -->normal text<-- */
+    color: var(--primary-color); /* Primary color for normal text */
+    font-family: poppins, sans-serif; /* Poppins font for normal text */
+    font-style: normal; /* Normal font style for normal text */
+    font-weight: 400; /* Font weight for normal text */
+    margin-bottom: 20px; /* Margin bottom for normal text */
+    letter-spacing: 6px; /* Letter spacing for normal text */
+}
+
+.headings{
+    font-size: 2.5rem; /* Font size for -->heading<s-- */
+    color: var(--primary-color); /* Primary color for headings */
+    font-family: "ubuntu", sans-serif; /* Ubuntu font for headings */
+    font-style: normal; /* Normal font style for headings */
+    font-weight: 600; /* Font weight for headings */
+    margin-bottom: 20px; /* Margin bottom for headings */
+    letter-spacing: 6px; /* Letter spacing for headings */
+}
+
+.headings span{
+    color: var(--blue-color); /* Blue color for span elements inside headings */
+}
+
+.secondary-headings{
+    font-size: 2.5rem; /* Font size for -->secondary heading<-- */
+     font-family: "ubuntu", sans-serif; /* Ubuntu font for secondary heading */
+     padding: 1rem 0; /* Padding for secondary heading */
+}
+
+.lead{
+    font-size: 1.1rem; /* Font size for -->lead text<-- */
+    line-height: 2;
+    text-align: justify;
+}
+
+.primary-btn{
+    width:50%;
+    outline: none; /* Remove outline from button */
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.7rem;
+    font-size: 1rem; /* Font size for primary button */
+    border-radius: 4px; /* Border radius for primary button */
+    color: var(--white-color); /* White color for primary button text */
+    cursor: pointer; /* Pointer cursor for primary button */
+}
+/*step 4: Add CSS styles for the header */
+header{/*home,about,contact//Header styling */
+    display: flex; /* Flexbox layout for header */
+    background-color: var(--primary-color); /* Primary color for header background */
+    position: absolute; /* Absolute positioning for header */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
+    z-index: 6; /* Z-index for header */
+    width: 100%; /* Full width for header */
+    height: 100px; /* Height of the header */
+}
+.logo {
+    width: 100px; /* Width of the logo */
+    height: 100px; /* Height of the logo */
+    object-fit: contain;
+  }
+  
+
+nav{
+    display: flex; /* Flexbox layout for navigation */
+    justify-content: space-between; /* Space between navigation items */
+    align-items: center; /* Center items vertically */
+ }
+nav ul{
+    list-style-type: none; /* Remove bullet points from list */
+    display: flex; /* Flexbox layout for navigation items */
+}
+
+nav ul li{
+    margin: 0 0.9rem; /* Margin between navigation items */
+    position: relative; /* Position relative for the pseudo-element */
+    color: var(--white-color); /* White color for navigation items */
+}
+nav ul li a{
+    color: var(--white-color); /* White color for navigation links */
+    font-size: 1.2rem; /* Font size for navigation links */
+}
+
+nav ul li::before{
+    content: ""; /* Add content before the link */
+    position: absolute; /* Position absolute for the pseudo-element */top: absolute; /* Position absolute for the pseudo-element */
+    top: 30px; /* Position from the top */
+    left: 0; /* Position from the left */
+    width: 0; /* Initial width of the pseudo-element */
+    height: 3px; /* Height of the pseudo-element */
+    background-color: var(--white-color); /* White color for the pseudo-element */
+    opacity: 0; /* Initial opacity of the pseudo-element */
+    transition: all 0.3s ease; /* Transition effect for the pseudo-element */   
+}
+nav ul li:hover::before{
+    opacity:1;
+    width: 100%; /* Full width on hover */
+
+}
+
+.btn{
+    font: size 1.3em; /* Font size for button */
+    color:var(--white-color); /* White color for button text */
+    cursor: pointer; /* Pointer cursor for button */
+    display: none;/* Hide button by default */
+}
+
+
+main{
+    position: relative; /* Position relative for the main section */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
+    width: 100%; /* Full width for the main section */
+    height: 100%; /* Full height for the main section */
+    z-index: 0; /* Z-index for the main section */
+}
+
+.swiper{
+     height: 100vh; /* Full height for the swiper */
+  }
+
+.slide-container{
+width: 100%; /* Full width for the slide container */
+}
+.slide-container img{
+    width: 100%;
+    height: 100%; /* Full width and height for the slider images */
+    object-fit: cover; /* Cover the container without distortion */
+}
+
+/* write on image*/
+.img-overlay{/*child of .overlay class*/
+    position: absolute; /* Position absolute for the overlay */
+    z-index: 5;
+    left: 50%; /* Position from the left */
+    top: 50%; /* Position from the top */
+    text-align:center;
+    width: 100%; /* Full width for the overlay */
+    font-family: "ubuntu", sans-serif; /* Ubuntu font for the overlay */
+    transform:translate(-50%,-50%); /* shifts the element left by 50% of its width and up by 50% of its height. */
+}
+.img-overlay p{
+    font-size: 1rem;
+    color: var(--white-color); /* White color for overlay text */
+    letter-spacing: 8px; /* Letter spacing for overlay text */
+    animation: animate 4s forwards; /* Animation for overlay text */
+ }
+
+.img-overlay h2{
+    font-size: 5rem; /* Font size for overlay heading// as ubuntu */
+    color: var(--white-color); /* White color for overlay heading */
+    letter-spacing: 8px; /* Letter spacing for overlay heading */
+    text-transform: uppercase;
+    animation: animate 4s forwards; /* Animation for overlay heading */
+    transition: all 0.5s ease-in-out; /* Transition effect for overlay heading */
+ }
+.overlay{/*The .overlay class is likely used as a parent container
+     for elements like text, images, or other content that needs to be
+      layered(ABOVE THE LAYER) or styled on top of a background (e.g., an image or video).*/
+    position: relative;
+}
+.overlay::after{/*child of .overlay class*/
+    /* The ::after pseudo-element is used to create an overlay effect on the background image or video. */
+    content: "";
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent black overlay */
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(-50%); /* Initial position */
+        opacity: 0;
+    }
+    
+    50%{
+         opacity: 0.5; /* Slightly visible */
+    }
+    /*75%{
+         opacity: 0.5;  More visible 
+    }*/
+    100%{
+        transform: translateX(-0%); /* Final position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.img-overlay h2 span{/*child of .img-color class*/
+    color: transparent; 
+    -webkit-text-stroke: 1px  var(--white-color); 
+}
+
+/* step 5: Add CSS styles for the footer */
+#location-search{
+    transform:translateY(-170%); /* Shift the element up by 170% of its height */
+}
+
+.form-wrapper{
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    padding: 2rem; /* Padding for the form wrapper */
+     width: 100%; /* Full width for the form wrapper */
+ }
+
+ form{/*.form: Targets elements with the form class.
+    form: Targets all <form> elements.*/
+    display: flex; /* Flexbox layout for the form */
+     align-items: center; /* Center items horizontally */
+     justify-content: center; /* Center items vertically */
+
+ }
+
+ .form-contol{
+    width: 100%;
+ }
+
+ form input,select{
+    padding: 0.6em;
+    outline:none; /* Remove outline from input fields */
+    font-size: 1.1rem; /* Font size for input fields */
+    color:#000; /* Text color for input fields */
+    background-color: var(--white-color); /* White background for input fields */
+    border: 1px solid var(--light-gray-color); /* Remove border from input fields */
+    margin: 0 0.4rem; /* Margin between input fields */
+    border-radius: 4px; /* Border radius for input fields */
+transition: all 0.3s ease; /* Transition effect for input fields */
+    font-weight: 400; /* Font weight for input fields */
+ }

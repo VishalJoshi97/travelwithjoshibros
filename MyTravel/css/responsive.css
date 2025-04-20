@@ -1,0 +1,15 @@
+@media(max-width: 1024px){
+    .container{/*for container//Layout styling */
+          padding: 0 1rem; /* Padding for the container */
+     } 
+}
+
+@media(max-width: 900px){
+    .btn{
+        display: block; /* Button display block for smaller screens */
+    }
+}
+
+nav ul{
+    flex-direction: column; /* Navigation items in column for smaller screens */
+}
